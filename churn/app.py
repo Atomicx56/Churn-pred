@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
-# Set page configuration at the top, before any Streamlit components
+
 st.set_page_config(page_title="ChurnSage: AI-Powered Customer Insights", layout="wide")
 
 background_image = "https://ibb.co/ZfHw1G1"
@@ -26,7 +26,6 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-# Display logo at the top
 st.image(logo_image, width=200)
 
 # Function to preprocess the data
@@ -173,7 +172,7 @@ def main():
             st.warning("No churn-related column detected in the dataset.")
             return
         
-        target_column = churn_column  # Use the detected churn column
+        target_column = churn_column  
         
         # Store selected features and churn column in session state for later use
         if selected_features and target_column:
